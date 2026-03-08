@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>إنشاء حساب - 1X.swt</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="register-page">
+
+<div class="page-bg register-bg"></div>
+
+<div class="auth-wrapper">
+
+<div class="auth-card">
+
+<div class="auth-topbar">
+
+<div class="brand-box">
+<div class="brand-logo">1X</div>
+
+<div>
+<h1 class="brand-title">1X.swt</h1>
+<p class="brand-subtitle">إنشاء حساب جديد</p>
+</div>
+
+</div>
+
+<button class="lang-icon-btn">🌐</button>
+
+</div>
+
+
+<div class="auth-content">
+
+<h2 class="auth-title">إنشاء حساب</h2>
+<p class="auth-text">املأ المعلومات التالية لإنشاء حسابك.</p>
+
+
+<form id="registerForm" class="auth-form">
+
+<input
+type="text"
+id="full_name"
+class="form-input"
+placeholder="الاسم الكامل"
+required
+>
+
+<input
+type="email"
+id="email"
+class="form-input"
+placeholder="البريد الإلكتروني"
+required
+>
+
+<input
+type="password"
+id="password"
+class="form-input"
+placeholder="كلمة المرور"
+required
+>
+
+<input
+type="password"
+id="confirm_password"
+class="form-input"
+placeholder="تأكيد كلمة المرور"
+required
+>
+
+<button type="submit" class="primary-btn full-btn">
+إنشاء الحساب
+</button>
+
+</form>
+
+
+<p id="registerMessage" class="note form-message"></p>
+
+
+<div class="auth-links">
+<a href="login.html">لديك حساب؟ تسجيل الدخول</a>
+</div>
+
+
+</div>
+
+</div>
+
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="supabase.js"></script>
+<script src="register.js"></script>
+
+</body>
+</html>
