@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>الحساب - 1X.swt</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app">
+
+    <header class="top-header">
+      <div class="logo-box">
+        <div class="logo-circle">👤</div>
+        <div>
+          <h1>1X.swt</h1>
+          <p>الحساب الشخصي</p>
+        </div>
+      </div>
+
+      <button class="lang-icon-btn" type="button">🌐</button>
+    </header>
+
+    <section class="section-box">
+      <div class="profile-card">
+        <div class="profile-top">
+          <div class="avatar" id="avatarLetter">U</div>
+
+          <div>
+            <h3 id="userName">...</h3>
+            <p id="userEmail">...</p>
+          </div>
+        </div>
+
+        <div class="account-badge-row">
+          <span class="mini-badge" id="userUid">UID: --</span>
+          <span class="mini-badge vip-badge" id="userRole">USER</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats-grid">
+      <div class="stat-card">
+        <span>الرصيد</span>
+        <h3 id="balanceValue">0</h3>
+        <small>دولار</small>
+      </div>
+
+      <div class="stat-card">
+        <span>إجمالي الأرباح</span>
+        <h3 id="profitValue">0</h3>
+        <small>دولار</small>
+      </div>
+
+      <div class="stat-card">
+        <span>المتاح للسحب</span>
+        <h3 id="withdrawValue">0</h3>
+        <small>دولار</small>
+      </div>
+
+      <div class="stat-card">
+        <span>أرباح الإحالات</span>
+        <h3 id="referralProfitValue">0</h3>
+        <small>دولار</small>
+      </div>
+    </section>
+
+    <section class="section-box">
+      <div class="section-title">
+        <h2>الخدمات</h2>
+      </div>
+
+      <div class="profile-links">
+        <a href="codes.html">تفعيل الأكواد</a>
+        <a href="referrals.html">الإحالات والفريق</a>
+        <a href="deposit.html">الإيداع</a>
+        <a href="withdraw.html">السحب</a>
+        <a href="transactions.html">سجل العمليات</a>
+        <a href="telegram.html">ربط Telegram</a>
+        <a href="kyc.html">التحقق من الهوية</a>
+        <a href="transaction-password.html">كلمة مرور المعاملة</a>
+        <a href="#" id="logoutBtn">تسجيل الخروج</a>
+        <a href="admin.html" id="adminPanelLink" style="display:none;">لوحة الأدمن</a>
+      </div>
+    </section>
+
+    <nav class="bottom-nav">
+      <a href="index.html" class="nav-item">
+        <span>🏠</span>
+        <small>الرئيسية</small>
+      </a>
+
+      <a href="codes.html" class="nav-item">
+        <span>🎁</span>
+        <small>الأكواد</small>
+      </a>
+
+      <a href="deposit.html" class="nav-item">
+        <span>💳</span>
+        <small>إيداع</small>
+      </a>
+
+      <a href="withdraw.html" class="nav-item">
+        <span>💸</span>
+        <small>سحب</small>
+      </a>
+
+      <a href="account.html" class="nav-item active">
+        <span>👤</span>
+        <small>الحساب</small>
+      </a>
+    </nav>
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="supabase.js"></script>
+  <script src="account.js"></script>
+</body>
+</html>
