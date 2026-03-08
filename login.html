@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>تسجيل الدخول - 1X.swt</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="login-page">
+
+  <div class="page-bg login-bg"></div>
+
+  <div class="auth-wrapper">
+    <div class="auth-card">
+      <div class="auth-topbar">
+        <div class="brand-box">
+          <div class="brand-logo">1X</div>
+          <div>
+            <h1 class="brand-title">1X.swt</h1>
+            <p class="brand-subtitle">تسجيل الدخول إلى حسابك</p>
+          </div>
+        </div>
+
+        <button class="lang-icon-btn" type="button" id="langToggleBtn">🌐</button>
+      </div>
+
+      <div class="auth-content">
+        <h2 class="auth-title">مرحبًا بعودتك</h2>
+        <p class="auth-text">أدخل بياناتك للوصول إلى حسابك.</p>
+
+        <form id="loginForm" class="auth-form">
+          <input
+            type="email"
+            id="login_email"
+            class="form-input"
+            placeholder="البريد الإلكتروني"
+            required
+          />
+
+          <input
+            type="password"
+            id="login_password"
+            class="form-input"
+            placeholder="كلمة المرور"
+            required
+          />
+
+          <button type="submit" class="primary-btn full-btn">
+            دخول
+          </button>
+        </form>
+
+        <p id="loginMessage" class="note form-message"></p>
+
+        <div class="auth-links">
+          <a href="register.html">إنشاء حساب جديد</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="supabase.js"></script>
+  <script src="login.js"></script>
+</body>
+</html>
