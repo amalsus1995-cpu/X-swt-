@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>الإيداع - 1X.swt</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app">
+
+    <header class="top-header">
+      <div class="logo-box">
+        <div class="logo-circle">💳</div>
+        <div>
+          <h1>1X.swt</h1>
+          <p>الإيداع</p>
+        </div>
+      </div>
+      <button class="lang-icon-btn" type="button">🌐</button>
+    </header>
+
+    <section class="hero-card">
+      <div class="hero-text">
+        <h2>إيداع الرصيد</h2>
+        <p>اعرض بيانات الإيداع الخاصة بك وتأكد من الشبكة قبل التحويل.</p>
+      </div>
+    </section>
+
+    <section class="section-box">
+      <div class="section-title">
+        <h2>بيانات الإيداع</h2>
+      </div>
+
+      <div class="wallet-card">
+        <p><strong>الشبكة:</strong> TRC20</p>
+        <p class="wallet-address" id="walletAddress">
+          TRVTeYxfSg5v9sJfH1HWdxjZaJYCZmJqsu
+        </p>
+        <button class="primary-btn full-btn" type="button" id="copyWalletBtn">
+          نسخ العنوان
+        </button>
+        <p class="note">الحد الأدنى للإيداع: 500 دولار</p>
+      </div>
+    </section>
+
+    <section class="section-box">
+      <div class="section-title">
+        <h2>تنبيه</h2>
+      </div>
+
+      <div class="wallet-card">
+        <p>
+          تأكد من التحويل على نفس الشبكة فقط. أي تحويل على شبكة غير صحيحة قد يؤدي إلى فقدان الرصيد.
+        </p>
+      </div>
+    </section>
+
+    <nav class="bottom-nav">
+      <a href="index.html" class="nav-item">
+        <span>🏠</span>
+        <small>الرئيسية</small>
+      </a>
+      <a href="codes.html" class="nav-item">
+        <span>🎁</span>
+        <small>الأكواد</small>
+      </a>
+      <a href="deposit.html" class="nav-item active">
+        <span>💳</span>
+        <small>إيداع</small>
+      </a>
+      <a href="withdraw.html" class="nav-item">
+        <span>💸</span>
+        <small>سحب</small>
+      </a>
+      <a href="account.html" class="nav-item">
+        <span>👤</span>
+        <small>الحساب</small>
+      </a>
+    </nav>
+
+  </div>
+
+  <script>
+    const copyWalletBtn = document.getElementById("copyWalletBtn");
+    const walletAddress = document.getElementById("walletAddress");
+
+    copyWalletBtn.addEventListener("click", async () => {
+      try {
+        await navigator.clipboard.writeText(walletAddress.textContent.trim());
+        copyWalletBtn.textContent = "تم النسخ ✔";
+        setTimeout(() => {
+          copyWalletBtn.textContent = "نسخ العنوان";
+        }, 2000);
+      } catch {
+        copyWalletBtn.textContent = "فشل النسخ";
+      }
+    });
+  </script>
+</body>
+</html>
